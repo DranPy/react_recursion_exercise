@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import RecursiveComponent from './RecursiveComponent';
 
-// write components here
-// const One and so on...
+function One(props) {
+  return <span>{props.name || 'winter'}</span>
+}
+
+function Two(props) {
+  return <span>{props.name || 'is'}</span>
+}
+
+function Three(props) {
+  return <span>{props.name || 'coming'}</span>
+}
 
 // assign components below
-const components = [];
+const components = [<One />, <Two />, <Three />];
 
 export default class Recursion extends Component {
 	render() {
